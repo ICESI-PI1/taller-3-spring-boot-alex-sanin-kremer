@@ -33,6 +33,11 @@ public class BookRepositoryImpl implements IBookRepository {
     }
 
     @Override
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    @Override
     public void delete(Long id) {
         findById(id).ifPresent(existingBook -> books.remove(existingBook));
     }

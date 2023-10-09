@@ -34,6 +34,11 @@ public class AuthorRepositoryImpl implements IAuthorRepository {
     }
 
     @Override
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+    @Override
     public void delete(Long id) {
         findById(id).ifPresent(existingAuthor -> authors.remove(existingAuthor));
     }

@@ -1,13 +1,13 @@
-package com.library.management.persintence.repository;
+package com.library.management.service;
 
 import com.library.management.persintence.model.Book;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface IBookRepository {
+public interface IBookService {
     Optional<Book> findById(Long id);
     Book save(Book book);
-    List<Book> getBooks();
     void delete(Long id);
+    List<Book> getBooks();
 }
