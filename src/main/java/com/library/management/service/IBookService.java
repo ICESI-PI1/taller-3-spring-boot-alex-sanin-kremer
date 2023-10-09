@@ -1,6 +1,6 @@
 package com.library.management.service;
 
-import com.library.management.persintence.model.Book;
+import com.library.management.persistence.model.Book;
 
 import java.util.List;
 import java.util.Optional;

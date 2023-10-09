@@ -1,7 +1,7 @@
 package com.library.management.service.impl;
 
-import com.library.management.persintence.model.Book;
-import com.library.management.persintence.repository.IBookRepository;
+import com.library.management.persistence.model.Book;
+import com.library.management.persistence.repository.IBookRepository;
 import com.library.management.service.IBookService;
 import org.springframework.stereotype.Service;
 

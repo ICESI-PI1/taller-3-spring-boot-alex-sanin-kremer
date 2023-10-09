@@ -1,7 +1,7 @@
-package com.library.management.persintence.repository.impl;
+package com.library.management.persistence.repository.impl;
 
-import com.library.management.persintence.model.Book;
-import com.library.management.persintence.repository.IBookRepository;
+import com.library.management.persistence.model.Book;
+import com.library.management.persistence.repository.IBookRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

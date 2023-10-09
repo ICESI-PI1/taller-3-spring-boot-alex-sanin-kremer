@@ -1,4 +1,4 @@
-package com.library.management.persintence.model;
+package com.library.management.persistence.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

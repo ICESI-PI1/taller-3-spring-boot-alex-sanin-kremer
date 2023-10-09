@@ -1,7 +1,7 @@
 package com.library.management.service.impl;
 
-import com.library.management.persintence.model.Author;
-import com.library.management.persintence.repository.IAuthorRepository;
+import com.library.management.persistence.model.Author;
+import com.library.management.persistence.repository.IAuthorRepository;
 import com.library.management.service.IAuthorService;
 import org.springframework.stereotype.Service;
 

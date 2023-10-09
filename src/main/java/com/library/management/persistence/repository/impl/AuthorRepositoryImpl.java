@@ -1,8 +1,7 @@
-package com.library.management.persintence.repository.impl;
+package com.library.management.persistence.repository.impl;
 
-import com.library.management.persintence.model.Author;
-import com.library.management.persintence.model.Book;
-import com.library.management.persintence.repository.IAuthorRepository;
+import com.library.management.persistence.model.Author;
+import com.library.management.persistence.repository.IAuthorRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
