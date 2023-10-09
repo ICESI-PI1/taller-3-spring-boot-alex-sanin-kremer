@@ -36,4 +36,9 @@ public class BookServiceImpl implements IBookService {
     public List<Book> getBooks() {
         return bookRepository.getBooks();
     }
+
+    @Override
+    public List<Book> getBooksAuthor(Long id) {
+        return bookRepository.getBooksAuthor(id);
+    }
 }

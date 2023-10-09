@@ -10,4 +10,5 @@ public interface IBookService {
     Book save(Book book);
     void delete(Long id);
     List<Book> getBooks();
+    List<Book> getBooksAuthor(Long id);
 }

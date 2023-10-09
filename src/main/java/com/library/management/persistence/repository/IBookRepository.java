@@ -10,4 +10,5 @@ public interface IBookRepository {
     Book save(Book book);
     List<Book> getBooks();
     void delete(Long id);
+    List<Book> getBooksAuthor(Long id);
 }

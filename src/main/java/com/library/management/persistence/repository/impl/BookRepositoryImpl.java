@@ -41,4 +41,9 @@ public class BookRepositoryImpl implements IBookRepository {
     public void delete(Long id) {
         findById(id).ifPresent(existingBook -> books.remove(existingBook));
     }
+
+    @Override
+    public List<Book> getBooksAuthor(Long id) {
+        return books.stream().filter(b-> Objects.equals(b.getAuthor().getId(), id)).toList();
+    }
 }
