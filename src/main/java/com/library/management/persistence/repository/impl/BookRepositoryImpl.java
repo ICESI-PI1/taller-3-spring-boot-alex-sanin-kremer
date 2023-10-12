@@ -44,6 +44,6 @@ public class BookRepositoryImpl implements IBookRepository {
 
     @Override
     public List<Book> getBooksAuthor(Long id) {
-        return books.stream().filter(b-> Objects.equals(b.getAuthor().getId(), id)).toList();
+        return books.stream().filter(b-> Objects.equals(b.getAuthor(), id)).toList();
     }
 }

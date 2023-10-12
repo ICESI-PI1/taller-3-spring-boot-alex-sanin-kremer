@@ -14,7 +14,7 @@ public class Book {
     private Long id; //autoincremental????
     private String title;
     private Date datePublished;
-    private Author author;
+    private Long author;
 
 
     public Book(Book book) {

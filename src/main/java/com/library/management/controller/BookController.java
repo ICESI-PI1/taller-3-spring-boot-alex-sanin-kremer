@@ -18,7 +18,7 @@ import java.util.List;
  * DELETE /libros/{id}: Eliminar un libro.
  */
 @RestController
-@RequestMapping (value = "books")
+@RequestMapping (value = "/books")
 public class BookController {
 
     private IBookService bookService;
@@ -43,9 +43,9 @@ public class BookController {
         );
     }
 
-    @PostMapping()
+    @PostMapping
     public Book create(@RequestBody Book newBook) {
-        //LOG.info("Book:  {}", newBook);
+        LOG.info("Book:  {}", newBook);
         return this.bookService.save(newBook);
     }
 
@@ -60,11 +60,13 @@ public class BookController {
 
     @DeleteMapping("/{id}")
     public void delete( @PathVariable Long id) {
-        if (this.bookService.findById(id).isPresent())
+        if (this.bookService.findById(id).isPresent()){
             this.bookService.delete(id);
-        throw new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "entity not found"
-        );
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "entity not found"
+            );
+        }
     }
 
 }

@@ -66,11 +66,13 @@ public class AuthorController {
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        if (this.authorService.findById(id).isPresent())
+        if (this.authorService.findById(id).isPresent()){
             this.authorService.delete(id);
-        throw new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "entity not found"
-        );
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "entity not found"
+            );
+        }
     }
 
     @GetMapping("/{id}/books")
@@ -78,11 +80,10 @@ public class AuthorController {
         if (this.authorService.findById(id).isPresent()){
             return  bookService.getBooksAuthor(id);
         }else{
-        throw new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "entity not found"
-        );
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "entity not found"
+            );
         }
-
     }
 
 }
